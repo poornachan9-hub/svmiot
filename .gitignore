@@ -1,0 +1,33 @@
+﻿# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Credentials and private keys
+secrets/
+secrets.json
+credentials.json
+service-account*.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Node.js
+node_modules/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and generated reports
+*.log
+reports/
+
+# Generated datasets and model artifacts

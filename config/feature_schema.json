@@ -1,0 +1,48 @@
+{
+  "raw_feature_count": 15,
+  "raw_features": [
+    "flow_duration",
+    "fwd_pkts_tot",
+    "bwd_pkts_tot",
+    "fwd_data_pkts_tot",
+    "bwd_data_pkts_tot",
+    "fwd_pkts_per_sec",
+    "bwd_pkts_per_sec",
+    "flow_pkts_per_sec",
+    "fwd_byts_per_sec",
+    "bwd_byts_per_sec",
+    "fwd_pkts_payload_avg",
+    "bwd_pkts_payload_avg",
+    "proto",
+    "dst_port",
+    "conn_state_num"
+  ],
+  "engineered_feature_count": 19,
+  "final_model_features": [
+    "flow_duration",
+    "fwd_pkts_tot",
+    "bwd_pkts_tot",
+    "fwd_data_pkts_tot",
+    "bwd_data_pkts_tot",
+    "fwd_pkts_per_sec",
+    "bwd_pkts_per_sec",
+    "flow_pkts_per_sec",
+    "fwd_byts_per_sec",
+    "bwd_byts_per_sec",
+    "fwd_pkts_payload_avg",
+    "bwd_pkts_payload_avg",
+    "proto",
+    "dst_port",
+    "conn_state_num",
+    "packet_rate",
+    "fwd_bwd_ratio",
+    "total_pkts",
+    "traffic_asymmetry"
+  ],
+  "derived_features": {
+    "packet_rate": "fwd_pkts_tot / max(flow_duration, 1e-6)",
+    "fwd_bwd_ratio": "fwd_pkts_tot / (bwd_pkts_tot + 1)",
+    "total_pkts": "fwd_pkts_tot + bwd_pkts_tot",
+    "traffic_asymmetry": "(fwd_pkts_per_sec - bwd_pkts_per_sec) / (fwd_pkts_per_sec + bwd_pkts_per_sec + 1e-6)"
+  }
+}

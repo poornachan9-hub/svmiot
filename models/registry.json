@@ -1,0 +1,6392 @@
+[
+  {
+    "model_name": "LogisticRegression",
+    "version": "v1_20260907",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-09-07T17:03:44.559953+00:00",
+    "metrics": {
+      "model_name": "LogisticRegression",
+      "accuracy": 0.08046,
+      "precision_weighted": 0.26609,
+      "recall_weighted": 0.08046,
+      "f1_weighted": 0.071592,
+      "precision_macro": 0.126542,
+      "recall_macro": 0.120717,
+      "f1_macro": 0.084803,
+      "inference_time_ms": 1.031,
+      "n_test_samples": 2001,
+      "n_classes": 8,
+      "confusion_matrix": [
+        [
+          17,
+          16,
+          22,
+          27,
+          30,
+          3,
+          21,
+          13
+        ],
+        [
+          23,
+          44,
+          40,
+          35,
+          59,
+          7,
+          40,
+          58
+        ],
+        [
+          16,
+          24,
+          21,
+          20,
+          25,
+          1,
+          20,
+          30
+        ],
+        [
+          19,
+          15,
+          14,
+          12,
+          21,
+          1,
+          15,
+          16
+        ],
+        [
+          13,
+          15,
+          9,
+          10,
+          13,
+          0,
+          12,
+          10
+        ],
+        [
+          104,
+          120,
+          102,
+          134,
+          155,
+          13,
+          132,
+          157
+        ],
+        [
+          13,
+          30,
+          20,
+          27,
+          38,
+          3,
+          30,
+          41
+        ],
+        [
+          5,
+          11,
+          12,
+          11,
+          14,
+          0,
+          11,
+          11
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.08095238095238096,
+          "recall": 0.11409395973154363,
+          "f1-score": 0.0947075208913649,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.16,
+          "recall": 0.1437908496732026,
+          "f1-score": 0.1514629948364888,
+          "support": 306.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.0875,
+          "recall": 0.1337579617834395,
+          "f1-score": 0.10579345088161209,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.043478260869565216,
+          "recall": 0.10619469026548672,
+          "f1-score": 0.061696658097686374,
+          "support": 113.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.036619718309859155,
+          "recall": 0.15853658536585366,
+          "f1-score": 0.059496567505720827,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4642857142857143,
+          "recall": 0.014176663031624863,
+          "f1-score": 0.027513227513227514,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.10676156583629894,
+          "recall": 0.1485148514851485,
+          "f1-score": 0.12422360248447205,
+          "support": 202.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.03273809523809524,
+          "recall": 0.14666666666666667,
+          "f1-score": 0.0535279805352798,
+          "support": 75.0
+        },
+        "accuracy": 0.08045977011494253,
+        "macro avg": {
+          "precision": 0.12654196693648923,
+          "recall": 0.12071652850037076,
+          "f1-score": 0.08480275034323154,
+          "support": 2001.0
+        },
+        "weighted avg": {
+          "precision": 0.266090184199582,
+          "recall": 0.08045977011494253,
+          "f1-score": 0.07159245656838516,
+          "support": 2001.0
+        }
+      },
+      "roc_auc": 0.503417
+    },
+    "model_path": "models\\logisticregression\\LogisticRegression_v1_20260907.joblib",
+    "preprocessing_path": "models/preprocessing",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "80/20",
+    "is_production": false,
+    "validated": false,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'LogisticRegression' (v1_20260907) performs near random chance (ROC-AUC=0.503417, F1-macro=0.084803). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "DecisionTree",
+    "version": "v1_20260907",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-09-07T17:03:44.565175+00:00",
+    "metrics": {
+      "model_name": "DecisionTree",
+      "accuracy": 0.124438,
+      "precision_weighted": 0.249571,
+      "recall_weighted": 0.124438,
+      "f1_weighted": 0.139554,
+      "precision_macro": 0.121224,
+      "recall_macro": 0.12533,
+      "f1_macro": 0.098576,
+      "inference_time_ms": 0.975,
+      "n_test_samples": 2001,
+      "n_classes": 8,
+      "confusion_matrix": [
+        [
+          50,
+          21,
+          12,
+          7,
+          10,
+          18,
+          10,
+          21
+        ],
+        [
+          86,
+          32,
+          30,
+          34,
+          16,
+          44,
+          25,
+          39
+        ],
+        [
+          44,
+          16,
+          15,
+          12,
+          10,
+          19,
+          17,
+          24
+        ],
+        [
+          35,
+          12,
+          9,
+          10,
+          10,
+          14,
+          4,
+          19
+        ],
+        [
+          27,
+          7,
+          5,
+          5,
+          5,
+          13,
+          13,
+          7
+        ],
+        [
+          275,
+          110,
+          65,
+          91,
+          58,
+          113,
+          77,
+          128
+        ],
+        [
+          66,
+          22,
+          15,
+          19,
+          10,
+          25,
+          15,
+          30
+        ],
+        [
+          19,
+          14,
+          4,
+          6,
+          2,
+          13,
+          8,
+          9
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.08305647840531562,
+          "recall": 0.33557046979865773,
+          "f1-score": 0.13315579227696406,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.13675213675213677,
+          "recall": 0.10457516339869281,
+          "f1-score": 0.11851851851851852,
+          "support": 306.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.0967741935483871,
+          "recall": 0.09554140127388536,
+          "f1-score": 0.09615384615384616,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.05434782608695652,
+          "recall": 0.08849557522123894,
+          "f1-score": 0.06734006734006734,
+          "support": 113.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.04132231404958678,
+          "recall": 0.06097560975609756,
+          "f1-score": 0.04926108374384237,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4362934362934363,
+          "recall": 0.12322791712104689,
+          "f1-score": 0.1921768707482993,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.08875739644970414,
+          "recall": 0.07425742574257425,
+          "f1-score": 0.08086253369272237,
+          "support": 202.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.032490974729241874,
+          "recall": 0.12,
+          "f1-score": 0.05113636363636364,
+          "support": 75.0
+        },
+        "accuracy": 0.12443778110944528,
+        "macro avg": {
+          "precision": 0.12122434453934564,
+          "recall": 0.1253304452890242,
+          "f1-score": 0.09857563451382798,
+          "support": 2001.0
+        },
+        "weighted avg": {
+          "precision": 0.24957108939737596,
+          "recall": 0.12443778110944528,
+          "f1-score": 0.13955398280527662,
+          "support": 2001.0
+        }
+      },
+      "roc_auc": 0.493054
+    },
+    "model_path": "models\\decisiontree\\DecisionTree_v1_20260907.joblib",
+    "preprocessing_path": "models/preprocessing",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "80/20",
+    "is_production": false,
+    "validated": false,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'DecisionTree' (v1_20260907) performs near random chance (ROC-AUC=0.493054, F1-macro=0.098576). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "RandomForest",
+    "version": "v1_20260907",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-09-07T17:03:44.569608+00:00",
+    "metrics": {
+      "model_name": "RandomForest",
+      "accuracy": 0.457271,
+      "precision_weighted": 0.289767,
+      "recall_weighted": 0.457271,
+      "f1_weighted": 0.292712,
+      "precision_macro": 0.143387,
+      "recall_macro": 0.126509,
+      "f1_macro": 0.083286,
+      "inference_time_ms": 43.53,
+      "n_test_samples": 2001,
+      "n_classes": 8,
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          147,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          303,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          156,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          110,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          82,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          910,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          197,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          75,
+          0,
+          0
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.1875,
+          "recall": 0.00980392156862745,
+          "f1-score": 0.018633540372670808,
+          "support": 306.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 113.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4595959595959596,
+          "recall": 0.9923664122137404,
+          "f1-score": 0.6282361063168795,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.5,
+          "recall": 0.009900990099009901,
+          "f1-score": 0.019417475728155338,
+          "support": 202.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 75.0
+        },
+        "accuracy": 0.4572713643178411,
+        "macro avg": {
+          "precision": 0.14338699494949494,
+          "recall": 0.1265089154851722,
+          "f1-score": 0.08328589030221321,
+          "support": 2001.0
+        },
+        "weighted avg": {
+          "precision": 0.289767363792851,
+          "recall": 0.4572713643178411,
+          "f1-score": 0.2927119954741146,
+          "support": 2001.0
+        }
+      },
+      "roc_auc": 0.491267
+    },
+    "model_path": "models\\randomforest\\RandomForest_v1_20260907.joblib",
+    "preprocessing_path": "models/preprocessing",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "80/20",
+    "is_production": false,
+    "validated": false,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'RandomForest' (v1_20260907) performs near random chance (ROC-AUC=0.491267, F1-macro=0.083286). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "SVM",
+    "version": "v1_20260907",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-09-07T17:03:44.574729+00:00",
+    "metrics": {
+      "model_name": "SVM",
+      "accuracy": 0.10045,
+      "precision_weighted": 0.260256,
+      "recall_weighted": 0.10045,
+      "f1_weighted": 0.110612,
+      "precision_macro": 0.120874,
+      "recall_macro": 0.116877,
+      "f1_macro": 0.091332,
+      "inference_time_ms": 1455.161,
+      "n_test_samples": 2001,
+      "n_classes": 8,
+      "confusion_matrix": [
+        [
+          16,
+          28,
+          16,
+          19,
+          27,
+          12,
+          20,
+          11
+        ],
+        [
+          47,
+          38,
+          45,
+          35,
+          38,
+          21,
+          43,
+          39
+        ],
+        [
+          26,
+          15,
+          21,
+          18,
+          26,
+          13,
+          15,
+          23
+        ],
+        [
+          19,
+          12,
+          15,
+          15,
+          22,
+          4,
+          13,
+          13
+        ],
+        [
+          12,
+          7,
+          10,
+          10,
+          15,
+          8,
+          13,
+          7
+        ],
+        [
+          138,
+          147,
+          102,
+          102,
+          145,
+          66,
+          120,
+          97
+        ],
+        [
+          25,
+          34,
+          15,
+          24,
+          44,
+          13,
+          26,
+          21
+        ],
+        [
+          10,
+          10,
+          9,
+          12,
+          12,
+          5,
+          13,
+          4
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.05460750853242321,
+          "recall": 0.10738255033557047,
+          "f1-score": 0.07239819004524888,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.13058419243986255,
+          "recall": 0.12418300653594772,
+          "f1-score": 0.1273031825795645,
+          "support": 306.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.09012875536480687,
+          "recall": 0.1337579617834395,
+          "f1-score": 0.1076923076923077,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.06382978723404255,
+          "recall": 0.13274336283185842,
+          "f1-score": 0.08620689655172414,
+          "support": 113.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.04559270516717325,
+          "recall": 0.18292682926829268,
+          "f1-score": 0.072992700729927,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4647887323943662,
+          "recall": 0.07197382769901854,
+          "f1-score": 0.12464589235127478,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.09885931558935361,
+          "recall": 0.12871287128712872,
+          "f1-score": 0.11182795698924732,
+          "support": 202.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.018604651162790697,
+          "recall": 0.05333333333333334,
+          "f1-score": 0.027586206896551724,
+          "support": 75.0
+        },
+        "accuracy": 0.10044977511244378,
+        "macro avg": {
+          "precision": 0.12087445598560237,
+          "recall": 0.11687671788432367,
+          "f1-score": 0.09133166672948076,
+          "support": 2001.0
+        },
+        "weighted avg": {
+          "precision": 0.2602564029101705,
+          "recall": 0.10044977511244378,
+          "f1-score": 0.11061223057429699,
+          "support": 2001.0
+        }
+      },
+      "roc_auc": 0.492048
+    },
+    "model_path": "models\\svm\\SVM_v1_20260907.joblib",
+    "preprocessing_path": "models/preprocessing",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "80/20",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'SVM' (v1_20260907) performs near random chance (ROC-AUC=0.492048, F1-macro=0.091332). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "GradientBoosting",
+    "version": "v1_20260907",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-09-07T17:03:44.579633+00:00",
+    "metrics": {
+      "model_name": "GradientBoosting",
+      "accuracy": 0.431784,
+      "precision_weighted": 0.252385,
+      "recall_weighted": 0.431784,
+      "f1_weighted": 0.294859,
+      "precision_macro": 0.100875,
+      "recall_macro": 0.123776,
+      "f1_macro": 0.090457,
+      "inference_time_ms": 47.261,
+      "n_test_samples": 2001,
+      "n_classes": 8,
+      "confusion_matrix": [
+        [
+          0,
+          5,
+          3,
+          0,
+          0,
+          140,
+          0,
+          1
+        ],
+        [
+          2,
+          14,
+          3,
+          5,
+          1,
+          273,
+          6,
+          2
+        ],
+        [
+          1,
+          5,
+          1,
+          1,
+          5,
+          141,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          0,
+          1,
+          103,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          79,
+          0,
+          2
+        ],
+        [
+          10,
+          23,
+          6,
+          3,
+          8,
+          848,
+          10,
+          9
+        ],
+        [
+          1,
+          6,
+          2,
+          1,
+          0,
+          191,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          0,
+          1,
+          0,
+          69,
+          0,
+          1
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.22580645161290322,
+          "recall": 0.0457516339869281,
+          "f1-score": 0.07608695652173914,
+          "support": 306.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.0625,
+          "recall": 0.006369426751592357,
+          "f1-score": 0.011560693641618497,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 113.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4598698481561822,
+          "recall": 0.9247546346782988,
+          "f1-score": 0.614270191959435,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 202.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.058823529411764705,
+          "recall": 0.013333333333333334,
+          "f1-score": 0.021739130434782608,
+          "support": 75.0
+        },
+        "accuracy": 0.431784107946027,
+        "macro avg": {
+          "precision": 0.10087497864760626,
+          "recall": 0.12377612859376906,
+          "f1-score": 0.0904571215696969,
+          "support": 2001.0
+        },
+        "weighted avg": {
+          "precision": 0.2523846525030734,
+          "recall": 0.431784107946027,
+          "f1-score": 0.29485948945866913,
+          "support": 2001.0
+        }
+      },
+      "roc_auc": 0.494822
+    },
+    "model_path": "models\\gradientboosting\\GradientBoosting_v1_20260907.joblib",
+    "preprocessing_path": "models/preprocessing",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "80/20",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'GradientBoosting' (v1_20260907) performs near random chance (ROC-AUC=0.494822, F1-macro=0.090457). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "LogisticRegression",
+    "version": "v2_20261011T160541Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T16:06:43.908817+00:00",
+    "metrics": {
+      "model_name": "LogisticRegression",
+      "evaluated_at": "2026-10-11T16:06:42.103707+00:00",
+      "accuracy": 0.065,
+      "precision": 0.219712,
+      "recall": 0.065,
+      "f1": 0.056782,
+      "precision_weighted": 0.219712,
+      "recall_weighted": 0.065,
+      "f1_weighted": 0.056782,
+      "precision_macro": 0.104299,
+      "recall_macro": 0.099551,
+      "f1_macro": 0.068942,
+      "inference_time_ms": 1.887,
+      "inference_ms_per_sample": 0.000943,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          11,
+          16,
+          26,
+          30,
+          26,
+          2,
+          26,
+          12
+        ],
+        [
+          25,
+          29,
+          46,
+          57,
+          50,
+          6,
+          46,
+          46
+        ],
+        [
+          15,
+          13,
+          17,
+          23,
+          33,
+          4,
+          22,
+          30
+        ],
+        [
+          15,
+          18,
+          16,
+          15,
+          19,
+          0,
+          21,
+          10
+        ],
+        [
+          7,
+          12,
+          14,
+          9,
+          11,
+          3,
+          12,
+          14
+        ],
+        [
+          103,
+          101,
+          83,
+          122,
+          162,
+          10,
+          160,
+          176
+        ],
+        [
+          13,
+          30,
+          16,
+          35,
+          44,
+          1,
+          30,
+          32
+        ],
+        [
+          12,
+          10,
+          5,
+          11,
+          16,
+          0,
+          14,
+          7
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.05472636815920398,
+          "recall": 0.0738255033557047,
+          "f1-score": 0.06285714285714286,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.12663755458515283,
+          "recall": 0.09508196721311475,
+          "f1-score": 0.10861423220973783,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.07623318385650224,
+          "recall": 0.10828025477707007,
+          "f1-score": 0.08947368421052632,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.04966887417218543,
+          "recall": 0.13157894736842105,
+          "f1-score": 0.07211538461538461,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.030470914127423823,
+          "recall": 0.13414634146341464,
+          "f1-score": 0.04966139954853273,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.38461538461538464,
+          "recall": 0.010905125408942203,
+          "f1-score": 0.021208907741251327,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.09063444108761329,
+          "recall": 0.14925373134328357,
+          "f1-score": 0.11278195488721804,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.021406727828746176,
+          "recall": 0.09333333333333334,
+          "f1-score": 0.03482587064676617,
+          "support": 75.0
+        },
+        "accuracy": 0.065,
+        "macro avg": {
+          "precision": 0.10429918105402655,
+          "recall": 0.09955065053291054,
+          "f1-score": 0.06894232208956999,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.21971174721090783,
+          "recall": 0.065,
+          "f1-score": 0.05678174688471812,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.486631,
+      "pr_auc": 0.12414
+    },
+    "validation_metrics": {
+      "model_name": "LogisticRegression",
+      "evaluated_at": "2026-10-11T16:06:42.103707+00:00",
+      "accuracy": 0.065,
+      "precision": 0.219712,
+      "recall": 0.065,
+      "f1": 0.056782,
+      "precision_weighted": 0.219712,
+      "recall_weighted": 0.065,
+      "f1_weighted": 0.056782,
+      "precision_macro": 0.104299,
+      "recall_macro": 0.099551,
+      "f1_macro": 0.068942,
+      "inference_time_ms": 1.887,
+      "inference_ms_per_sample": 0.000943,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          11,
+          16,
+          26,
+          30,
+          26,
+          2,
+          26,
+          12
+        ],
+        [
+          25,
+          29,
+          46,
+          57,
+          50,
+          6,
+          46,
+          46
+        ],
+        [
+          15,
+          13,
+          17,
+          23,
+          33,
+          4,
+          22,
+          30
+        ],
+        [
+          15,
+          18,
+          16,
+          15,
+          19,
+          0,
+          21,
+          10
+        ],
+        [
+          7,
+          12,
+          14,
+          9,
+          11,
+          3,
+          12,
+          14
+        ],
+        [
+          103,
+          101,
+          83,
+          122,
+          162,
+          10,
+          160,
+          176
+        ],
+        [
+          13,
+          30,
+          16,
+          35,
+          44,
+          1,
+          30,
+          32
+        ],
+        [
+          12,
+          10,
+          5,
+          11,
+          16,
+          0,
+          14,
+          7
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.05472636815920398,
+          "recall": 0.0738255033557047,
+          "f1-score": 0.06285714285714286,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.12663755458515283,
+          "recall": 0.09508196721311475,
+          "f1-score": 0.10861423220973783,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.07623318385650224,
+          "recall": 0.10828025477707007,
+          "f1-score": 0.08947368421052632,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.04966887417218543,
+          "recall": 0.13157894736842105,
+          "f1-score": 0.07211538461538461,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.030470914127423823,
+          "recall": 0.13414634146341464,
+          "f1-score": 0.04966139954853273,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.38461538461538464,
+          "recall": 0.010905125408942203,
+          "f1-score": 0.021208907741251327,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.09063444108761329,
+          "recall": 0.14925373134328357,
+          "f1-score": 0.11278195488721804,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.021406727828746176,
+          "recall": 0.09333333333333334,
+          "f1-score": 0.03482587064676617,
+          "support": 75.0
+        },
+        "accuracy": 0.065,
+        "macro avg": {
+          "precision": 0.10429918105402655,
+          "recall": 0.09955065053291054,
+          "f1-score": 0.06894232208956999,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.21971174721090783,
+          "recall": 0.065,
+          "f1-score": 0.05678174688471812,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.486631,
+      "pr_auc": 0.12414
+    },
+    "evaluation_date": "2026-10-11T16:06:42.103707+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\models\\logisticregression\\LogisticRegression_v2_20261011T160541Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "7000/1000/2000",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'LogisticRegression' (v2_20261011T160541Z) performs near random chance (ROC-AUC=0.486631, F1-macro=0.068942). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "DecisionTree",
+    "version": "v2_20261011T160541Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T16:06:43.913342+00:00",
+    "metrics": {
+      "model_name": "DecisionTree",
+      "evaluated_at": "2026-10-11T16:06:42.124723+00:00",
+      "accuracy": 0.1665,
+      "precision": 0.257305,
+      "recall": 0.1665,
+      "f1": 0.190704,
+      "precision_weighted": 0.257305,
+      "recall_weighted": 0.1665,
+      "f1_weighted": 0.190704,
+      "precision_macro": 0.12845,
+      "recall_macro": 0.129917,
+      "f1_macro": 0.119266,
+      "inference_time_ms": 0.488,
+      "inference_ms_per_sample": 0.000244,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          18,
+          22,
+          17,
+          11,
+          23,
+          32,
+          19,
+          7
+        ],
+        [
+          35,
+          48,
+          39,
+          29,
+          30,
+          67,
+          45,
+          12
+        ],
+        [
+          9,
+          18,
+          17,
+          13,
+          27,
+          42,
+          21,
+          10
+        ],
+        [
+          11,
+          13,
+          10,
+          19,
+          12,
+          22,
+          19,
+          8
+        ],
+        [
+          9,
+          7,
+          14,
+          10,
+          7,
+          18,
+          10,
+          7
+        ],
+        [
+          115,
+          112,
+          119,
+          82,
+          109,
+          188,
+          139,
+          53
+        ],
+        [
+          20,
+          30,
+          26,
+          23,
+          13,
+          48,
+          34,
+          7
+        ],
+        [
+          8,
+          7,
+          11,
+          9,
+          11,
+          17,
+          10,
+          2
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.08,
+          "recall": 0.12080536912751678,
+          "f1-score": 0.0962566844919786,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.1867704280155642,
+          "recall": 0.15737704918032788,
+          "f1-score": 0.1708185053380783,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.06719367588932806,
+          "recall": 0.10828025477707007,
+          "f1-score": 0.08292682926829269,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.09693877551020408,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.12258064516129032,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.03017241379310345,
+          "recall": 0.08536585365853659,
+          "f1-score": 0.044585987261146494,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.43317972350230416,
+          "recall": 0.2050163576881134,
+          "f1-score": 0.2783123612139156,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.11447811447811448,
+          "recall": 0.1691542288557214,
+          "f1-score": 0.13654618473895583,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.018867924528301886,
+          "recall": 0.02666666666666667,
+          "f1-score": 0.022099447513812154,
+          "support": 75.0
+        },
+        "accuracy": 0.1665,
+        "macro avg": {
+          "precision": 0.12845013196461505,
+          "recall": 0.12991655582757744,
+          "f1-score": 0.11926583062343375,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.25730527389995295,
+          "recall": 0.1665,
+          "f1-score": 0.1907036618727842,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.501164,
+      "pr_auc": 0.12544
+    },
+    "validation_metrics": {
+      "model_name": "DecisionTree",
+      "evaluated_at": "2026-10-11T16:06:42.124723+00:00",
+      "accuracy": 0.1665,
+      "precision": 0.257305,
+      "recall": 0.1665,
+      "f1": 0.190704,
+      "precision_weighted": 0.257305,
+      "recall_weighted": 0.1665,
+      "f1_weighted": 0.190704,
+      "precision_macro": 0.12845,
+      "recall_macro": 0.129917,
+      "f1_macro": 0.119266,
+      "inference_time_ms": 0.488,
+      "inference_ms_per_sample": 0.000244,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          18,
+          22,
+          17,
+          11,
+          23,
+          32,
+          19,
+          7
+        ],
+        [
+          35,
+          48,
+          39,
+          29,
+          30,
+          67,
+          45,
+          12
+        ],
+        [
+          9,
+          18,
+          17,
+          13,
+          27,
+          42,
+          21,
+          10
+        ],
+        [
+          11,
+          13,
+          10,
+          19,
+          12,
+          22,
+          19,
+          8
+        ],
+        [
+          9,
+          7,
+          14,
+          10,
+          7,
+          18,
+          10,
+          7
+        ],
+        [
+          115,
+          112,
+          119,
+          82,
+          109,
+          188,
+          139,
+          53
+        ],
+        [
+          20,
+          30,
+          26,
+          23,
+          13,
+          48,
+          34,
+          7
+        ],
+        [
+          8,
+          7,
+          11,
+          9,
+          11,
+          17,
+          10,
+          2
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.08,
+          "recall": 0.12080536912751678,
+          "f1-score": 0.0962566844919786,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.1867704280155642,
+          "recall": 0.15737704918032788,
+          "f1-score": 0.1708185053380783,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.06719367588932806,
+          "recall": 0.10828025477707007,
+          "f1-score": 0.08292682926829269,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.09693877551020408,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.12258064516129032,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.03017241379310345,
+          "recall": 0.08536585365853659,
+          "f1-score": 0.044585987261146494,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.43317972350230416,
+          "recall": 0.2050163576881134,
+          "f1-score": 0.2783123612139156,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.11447811447811448,
+          "recall": 0.1691542288557214,
+          "f1-score": 0.13654618473895583,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.018867924528301886,
+          "recall": 0.02666666666666667,
+          "f1-score": 0.022099447513812154,
+          "support": 75.0
+        },
+        "accuracy": 0.1665,
+        "macro avg": {
+          "precision": 0.12845013196461505,
+          "recall": 0.12991655582757744,
+          "f1-score": 0.11926583062343375,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.25730527389995295,
+          "recall": 0.1665,
+          "f1-score": 0.1907036618727842,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.501164,
+      "pr_auc": 0.12544
+    },
+    "evaluation_date": "2026-10-11T16:06:42.124723+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\models\\decisiontree\\DecisionTree_v2_20261011T160541Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "7000/1000/2000",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'DecisionTree' (v2_20261011T160541Z) performs near random chance (ROC-AUC=0.501164, F1-macro=0.119266). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "RandomForest",
+    "version": "v2_20261011T160541Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T16:06:43.917351+00:00",
+    "metrics": {
+      "model_name": "RandomForest",
+      "evaluated_at": "2026-10-11T16:06:42.170964+00:00",
+      "accuracy": 0.455,
+      "precision": 0.221386,
+      "recall": 0.455,
+      "f1": 0.288686,
+      "precision_weighted": 0.221386,
+      "recall_weighted": 0.455,
+      "f1_weighted": 0.288686,
+      "precision_macro": 0.066315,
+      "recall_macro": 0.124319,
+      "f1_macro": 0.079227,
+      "inference_time_ms": 27.723,
+      "inference_ms_per_sample": 0.013861,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          145,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          302,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          156,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          112,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          82,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          1,
+          0,
+          909,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          199,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          75,
+          0,
+          0
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.07142857142857142,
+          "recall": 0.003278688524590164,
+          "f1-score": 0.006269592476489028,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4590909090909091,
+          "recall": 0.9912758996728462,
+          "f1-score": 0.6275457369692785,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 75.0
+        },
+        "accuracy": 0.455,
+        "macro avg": {
+          "precision": 0.06631493506493506,
+          "recall": 0.12431932352467955,
+          "f1-score": 0.07922691618072095,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.22138603896103895,
+          "recall": 0.455,
+          "f1-score": 0.2886858332530788,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.495514,
+      "pr_auc": 0.130527
+    },
+    "validation_metrics": {
+      "model_name": "RandomForest",
+      "evaluated_at": "2026-10-11T16:06:42.170964+00:00",
+      "accuracy": 0.455,
+      "precision": 0.221386,
+      "recall": 0.455,
+      "f1": 0.288686,
+      "precision_weighted": 0.221386,
+      "recall_weighted": 0.455,
+      "f1_weighted": 0.288686,
+      "precision_macro": 0.066315,
+      "recall_macro": 0.124319,
+      "f1_macro": 0.079227,
+      "inference_time_ms": 27.723,
+      "inference_ms_per_sample": 0.013861,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          145,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          302,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          156,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          112,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          82,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          1,
+          0,
+          909,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          199,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          75,
+          0,
+          0
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.07142857142857142,
+          "recall": 0.003278688524590164,
+          "f1-score": 0.006269592476489028,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4590909090909091,
+          "recall": 0.9912758996728462,
+          "f1-score": 0.6275457369692785,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 75.0
+        },
+        "accuracy": 0.455,
+        "macro avg": {
+          "precision": 0.06631493506493506,
+          "recall": 0.12431932352467955,
+          "f1-score": 0.07922691618072095,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.22138603896103895,
+          "recall": 0.455,
+          "f1-score": 0.2886858332530788,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.495514,
+      "pr_auc": 0.130527
+    },
+    "evaluation_date": "2026-10-11T16:06:42.170964+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\models\\randomforest\\RandomForest_v2_20261011T160541Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "7000/1000/2000",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'RandomForest' (v2_20261011T160541Z) performs near random chance (ROC-AUC=0.495514, F1-macro=0.079227). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "SVM",
+    "version": "v2_20261011T160541Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T16:06:43.923383+00:00",
+    "metrics": {
+      "model_name": "SVM",
+      "evaluated_at": "2026-10-11T16:06:42.917945+00:00",
+      "accuracy": 0.1005,
+      "precision": 0.266798,
+      "recall": 0.1005,
+      "f1": 0.107535,
+      "precision_weighted": 0.266798,
+      "recall_weighted": 0.1005,
+      "f1_weighted": 0.107535,
+      "precision_macro": 0.124817,
+      "recall_macro": 0.121648,
+      "f1_macro": 0.093472,
+      "inference_time_ms": 700.999,
+      "inference_ms_per_sample": 0.3505,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          19,
+          19,
+          16,
+          30,
+          23,
+          12,
+          18,
+          12
+        ],
+        [
+          49,
+          37,
+          35,
+          53,
+          39,
+          24,
+          38,
+          30
+        ],
+        [
+          21,
+          20,
+          21,
+          20,
+          30,
+          10,
+          19,
+          16
+        ],
+        [
+          22,
+          15,
+          17,
+          12,
+          17,
+          6,
+          12,
+          13
+        ],
+        [
+          19,
+          9,
+          8,
+          10,
+          16,
+          3,
+          14,
+          3
+        ],
+        [
+          144,
+          154,
+          79,
+          108,
+          122,
+          59,
+          149,
+          102
+        ],
+        [
+          28,
+          27,
+          18,
+          25,
+          40,
+          9,
+          32,
+          22
+        ],
+        [
+          10,
+          10,
+          7,
+          14,
+          15,
+          1,
+          13,
+          5
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.060897435897435896,
+          "recall": 0.12751677852348994,
+          "f1-score": 0.0824295010845987,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.12714776632302405,
+          "recall": 0.12131147540983607,
+          "f1-score": 0.12416107382550336,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.1044776119402985,
+          "recall": 0.1337579617834395,
+          "f1-score": 0.11731843575418995,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.04411764705882353,
+          "recall": 0.10526315789473684,
+          "f1-score": 0.06217616580310881,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.052980132450331126,
+          "recall": 0.1951219512195122,
+          "f1-score": 0.08333333333333333,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.47580645161290325,
+          "recall": 0.064340239912759,
+          "f1-score": 0.11335254562920269,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.10847457627118644,
+          "recall": 0.15920398009950248,
+          "f1-score": 0.12903225806451613,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.024630541871921183,
+          "recall": 0.06666666666666667,
+          "f1-score": 0.03597122302158273,
+          "support": 75.0
+        },
+        "accuracy": 0.1005,
+        "macro avg": {
+          "precision": 0.12481652042824051,
+          "recall": 0.12164777643874283,
+          "f1-score": 0.09347181706450447,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.26679787548871753,
+          "recall": 0.1005,
+          "f1-score": 0.10753457188312229,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.505991,
+      "pr_auc": 0.131897
+    },
+    "validation_metrics": {
+      "model_name": "SVM",
+      "evaluated_at": "2026-10-11T16:06:42.917945+00:00",
+      "accuracy": 0.1005,
+      "precision": 0.266798,
+      "recall": 0.1005,
+      "f1": 0.107535,
+      "precision_weighted": 0.266798,
+      "recall_weighted": 0.1005,
+      "f1_weighted": 0.107535,
+      "precision_macro": 0.124817,
+      "recall_macro": 0.121648,
+      "f1_macro": 0.093472,
+      "inference_time_ms": 700.999,
+      "inference_ms_per_sample": 0.3505,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          19,
+          19,
+          16,
+          30,
+          23,
+          12,
+          18,
+          12
+        ],
+        [
+          49,
+          37,
+          35,
+          53,
+          39,
+          24,
+          38,
+          30
+        ],
+        [
+          21,
+          20,
+          21,
+          20,
+          30,
+          10,
+          19,
+          16
+        ],
+        [
+          22,
+          15,
+          17,
+          12,
+          17,
+          6,
+          12,
+          13
+        ],
+        [
+          19,
+          9,
+          8,
+          10,
+          16,
+          3,
+          14,
+          3
+        ],
+        [
+          144,
+          154,
+          79,
+          108,
+          122,
+          59,
+          149,
+          102
+        ],
+        [
+          28,
+          27,
+          18,
+          25,
+          40,
+          9,
+          32,
+          22
+        ],
+        [
+          10,
+          10,
+          7,
+          14,
+          15,
+          1,
+          13,
+          5
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.060897435897435896,
+          "recall": 0.12751677852348994,
+          "f1-score": 0.0824295010845987,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.12714776632302405,
+          "recall": 0.12131147540983607,
+          "f1-score": 0.12416107382550336,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.1044776119402985,
+          "recall": 0.1337579617834395,
+          "f1-score": 0.11731843575418995,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.04411764705882353,
+          "recall": 0.10526315789473684,
+          "f1-score": 0.06217616580310881,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.052980132450331126,
+          "recall": 0.1951219512195122,
+          "f1-score": 0.08333333333333333,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.47580645161290325,
+          "recall": 0.064340239912759,
+          "f1-score": 0.11335254562920269,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.10847457627118644,
+          "recall": 0.15920398009950248,
+          "f1-score": 0.12903225806451613,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.024630541871921183,
+          "recall": 0.06666666666666667,
+          "f1-score": 0.03597122302158273,
+          "support": 75.0
+        },
+        "accuracy": 0.1005,
+        "macro avg": {
+          "precision": 0.12481652042824051,
+          "recall": 0.12164777643874283,
+          "f1-score": 0.09347181706450447,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.26679787548871753,
+          "recall": 0.1005,
+          "f1-score": 0.10753457188312229,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.505991,
+      "pr_auc": 0.131897
+    },
+    "evaluation_date": "2026-10-11T16:06:42.917945+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\models\\svm\\SVM_v2_20261011T160541Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "7000/1000/2000",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'SVM' (v2_20261011T160541Z) performs near random chance (ROC-AUC=0.505991, F1-macro=0.093472). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "GradientBoosting",
+    "version": "v2_20261011T160541Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "fwd_byts_per_sec",
+      "bwd_byts_per_sec",
+      "fwd_pkts_payload_avg",
+      "bwd_pkts_payload_avg",
+      "proto",
+      "dst_port",
+      "conn_state_num",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T16:06:43.929981+00:00",
+    "metrics": {
+      "model_name": "GradientBoosting",
+      "evaluated_at": "2026-10-11T16:06:43.660507+00:00",
+      "accuracy": 0.271,
+      "precision": 0.268025,
+      "recall": 0.271,
+      "f1": 0.269201,
+      "precision_weighted": 0.268025,
+      "recall_weighted": 0.271,
+      "f1_weighted": 0.269201,
+      "precision_macro": 0.121741,
+      "recall_macro": 0.125154,
+      "f1_macro": 0.123156,
+      "inference_time_ms": 27.001,
+      "inference_ms_per_sample": 0.013501,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          9,
+          17,
+          16,
+          6,
+          10,
+          71,
+          17,
+          3
+        ],
+        [
+          19,
+          72,
+          24,
+          17,
+          6,
+          117,
+          43,
+          7
+        ],
+        [
+          11,
+          26,
+          13,
+          8,
+          8,
+          76,
+          14,
+          1
+        ],
+        [
+          5,
+          22,
+          12,
+          4,
+          5,
+          51,
+          15,
+          0
+        ],
+        [
+          5,
+          16,
+          9,
+          4,
+          4,
+          40,
+          3,
+          1
+        ],
+        [
+          75,
+          152,
+          68,
+          43,
+          32,
+          425,
+          100,
+          22
+        ],
+        [
+          9,
+          48,
+          12,
+          9,
+          14,
+          88,
+          15,
+          6
+        ],
+        [
+          6,
+          12,
+          7,
+          2,
+          3,
+          37,
+          8,
+          0
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.06474820143884892,
+          "recall": 0.06040268456375839,
+          "f1-score": 0.0625,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.19726027397260273,
+          "recall": 0.2360655737704918,
+          "f1-score": 0.21492537313432836,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.08074534161490683,
+          "recall": 0.08280254777070063,
+          "f1-score": 0.08176100628930817,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.043010752688172046,
+          "recall": 0.03508771929824561,
+          "f1-score": 0.03864734299516908,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.04878048780487805,
+          "recall": 0.04878048780487805,
+          "f1-score": 0.04878048780487805,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4696132596685083,
+          "recall": 0.46346782988004365,
+          "f1-score": 0.4665203073545554,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.06976744186046512,
+          "recall": 0.07462686567164178,
+          "f1-score": 0.07211538461538461,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 75.0
+        },
+        "accuracy": 0.271,
+        "macro avg": {
+          "precision": 0.12174071988104776,
+          "recall": 0.12515421359497,
+          "f1-score": 0.12315623777420295,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.26802536247299996,
+          "recall": 0.271,
+          "f1-score": 0.2692006640233302,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.495782,
+      "pr_auc": 0.128334
+    },
+    "validation_metrics": {
+      "model_name": "GradientBoosting",
+      "evaluated_at": "2026-10-11T16:06:43.660507+00:00",
+      "accuracy": 0.271,
+      "precision": 0.268025,
+      "recall": 0.271,
+      "f1": 0.269201,
+      "precision_weighted": 0.268025,
+      "recall_weighted": 0.271,
+      "f1_weighted": 0.269201,
+      "precision_macro": 0.121741,
+      "recall_macro": 0.125154,
+      "f1_macro": 0.123156,
+      "inference_time_ms": 27.001,
+      "inference_ms_per_sample": 0.013501,
+      "n_test_samples": 2000,
+      "n_classes": 8,
+      "class_names": [
+        "ARP_poisioning",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Normal",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          9,
+          17,
+          16,
+          6,
+          10,
+          71,
+          17,
+          3
+        ],
+        [
+          19,
+          72,
+          24,
+          17,
+          6,
+          117,
+          43,
+          7
+        ],
+        [
+          11,
+          26,
+          13,
+          8,
+          8,
+          76,
+          14,
+          1
+        ],
+        [
+          5,
+          22,
+          12,
+          4,
+          5,
+          51,
+          15,
+          0
+        ],
+        [
+          5,
+          16,
+          9,
+          4,
+          4,
+          40,
+          3,
+          1
+        ],
+        [
+          75,
+          152,
+          68,
+          43,
+          32,
+          425,
+          100,
+          22
+        ],
+        [
+          9,
+          48,
+          12,
+          9,
+          14,
+          88,
+          15,
+          6
+        ],
+        [
+          6,
+          12,
+          7,
+          2,
+          3,
+          37,
+          8,
+          0
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.06474820143884892,
+          "recall": 0.06040268456375839,
+          "f1-score": 0.0625,
+          "support": 149.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 0.19726027397260273,
+          "recall": 0.2360655737704918,
+          "f1-score": 0.21492537313432836,
+          "support": 305.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.08074534161490683,
+          "recall": 0.08280254777070063,
+          "f1-score": 0.08176100628930817,
+          "support": 157.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.043010752688172046,
+          "recall": 0.03508771929824561,
+          "f1-score": 0.03864734299516908,
+          "support": 114.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.04878048780487805,
+          "recall": 0.04878048780487805,
+          "f1-score": 0.04878048780487805,
+          "support": 82.0
+        },
+        "Normal": {
+          "precision": 0.4696132596685083,
+          "recall": 0.46346782988004365,
+          "f1-score": 0.4665203073545554,
+          "support": 917.0
+        },
+        "Thing_Speak": {
+          "precision": 0.06976744186046512,
+          "recall": 0.07462686567164178,
+          "f1-score": 0.07211538461538461,
+          "support": 201.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 75.0
+        },
+        "accuracy": 0.271,
+        "macro avg": {
+          "precision": 0.12174071988104776,
+          "recall": 0.12515421359497,
+          "f1-score": 0.12315623777420295,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.26802536247299996,
+          "recall": 0.271,
+          "f1-score": 0.2692006640233302,
+          "support": 2000.0
+        }
+      },
+      "roc_auc": 0.495782,
+      "pr_auc": 0.128334
+    },
+    "evaluation_date": "2026-10-11T16:06:43.660507+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\models\\gradientboosting\\GradientBoosting_v2_20261011T160541Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T160541Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "7000/1000/2000",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": true,
+    "production_ready": false,
+    "warning": "CRITICAL WARNING: Model 'GradientBoosting' (v2_20261011T160541Z) performs near random chance (ROC-AUC=0.495782, F1-macro=0.123156). Features lack predictive attack signal. Never call a model production-ready solely because training or inference succeeds."
+  },
+  {
+    "model_name": "LogisticRegression",
+    "version": "v2_20261011T180309589011Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "id.resp_p",
+      "proto",
+      "service",
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "flow_FIN_flag_count",
+      "flow_SYN_flag_count",
+      "flow_RST_flag_count",
+      "fwd_PSH_flag_count",
+      "bwd_PSH_flag_count",
+      "flow_ACK_flag_count",
+      "fwd_URG_flag_count",
+      "flow_CWR_flag_count",
+      "flow_ECE_flag_count",
+      "fwd_pkts_payload.min",
+      "fwd_pkts_payload.max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "fwd_pkts_payload.std",
+      "bwd_pkts_payload.min",
+      "bwd_pkts_payload.max",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "bwd_pkts_payload.std",
+      "flow_pkts_payload.min",
+      "flow_pkts_payload.max",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "flow_pkts_payload.std",
+      "fwd_iat.min",
+      "fwd_iat.max",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "fwd_iat.std",
+      "bwd_iat.min",
+      "bwd_iat.max",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "bwd_iat.std",
+      "flow_iat.min",
+      "flow_iat.max",
+      "flow_iat.tot",
+      "flow_iat.avg",
+      "flow_iat.std",
+      "payload_bytes_per_second",
+      "fwd_subflow_pkts",
+      "bwd_subflow_pkts",
+      "fwd_subflow_bytes",
+      "bwd_subflow_bytes",
+      "fwd_bulk_bytes",
+      "bwd_bulk_bytes",
+      "fwd_bulk_packets",
+      "bwd_bulk_packets",
+      "fwd_bulk_rate",
+      "bwd_bulk_rate",
+      "active.min",
+      "active.max",
+      "active.tot",
+      "active.avg",
+      "active.std",
+      "idle.min",
+      "idle.max",
+      "idle.tot",
+      "idle.avg",
+      "idle.std",
+      "fwd_init_window_size",
+      "bwd_init_window_size",
+      "fwd_last_window_size",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T18:14:28.495416+00:00",
+    "metrics": {
+      "model_name": "LogisticRegression",
+      "evaluated_at": "2026-10-11T18:14:08.998509+00:00",
+      "accuracy": 0.966699,
+      "precision": 0.981395,
+      "recall": 0.966699,
+      "f1": 0.968598,
+      "precision_weighted": 0.981395,
+      "recall_weighted": 0.966699,
+      "f1_weighted": 0.968598,
+      "precision_macro": 0.741295,
+      "recall_macro": 0.947679,
+      "f1_macro": 0.773027,
+      "inference_time_ms": 7.516,
+      "inference_ms_per_sample": 0.000305,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          868,
+          34,
+          0,
+          0,
+          9,
+          68,
+          0,
+          1,
+          470,
+          0,
+          80,
+          20
+        ],
+        [
+          1,
+          102,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          823,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          19,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          493,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          0,
+          0,
+          5,
+          19,
+          0,
+          0,
+          23,
+          0,
+          1523,
+          32
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          50
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.9730941704035875,
+          "recall": 0.56,
+          "f1-score": 0.7108927108927109,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.6580645161290323,
+          "recall": 0.9532710280373832,
+          "f1-score": 0.7786259541984732,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 1.0,
+          "recall": 0.9927623642943305,
+          "f1-score": 0.9963680387409201,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.28,
+          "recall": 1.0,
+          "f1-score": 0.4375,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.06060606060606061,
+          "recall": 1.0,
+          "f1-score": 0.11428571428571428,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1-score": 0.9975062344139651,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.49848331648129424,
+          "recall": 0.9517374517374517,
+          "f1-score": 0.6542800265428003,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.949501246882793,
+          "recall": 0.938964241676942,
+          "f1-score": 0.9442033477991321,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.4807692307692308,
+          "recall": 0.9803921568627451,
+          "f1-score": 0.6451612903225806,
+          "support": 51.0
+        },
+        "accuracy": 0.9666991552956465,
+        "macro avg": {
+          "precision": 0.7412952847411572,
+          "recall": 0.9476793431858953,
+          "f1-score": 0.7730274626341883,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9813946592750898,
+          "recall": 0.9666991552956465,
+          "f1-score": 0.9685977444845636,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.997001,
+      "pr_auc": 0.901847,
+      "is_near_random": false,
+      "performance_warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty.",
+      "operational_readiness": "EXPERIMENTAL"
+    },
+    "validation_metrics": {
+      "model_name": "LogisticRegression",
+      "evaluated_at": "2026-10-11T18:14:08.998509+00:00",
+      "accuracy": 0.966699,
+      "precision": 0.981395,
+      "recall": 0.966699,
+      "f1": 0.968598,
+      "precision_weighted": 0.981395,
+      "recall_weighted": 0.966699,
+      "f1_weighted": 0.968598,
+      "precision_macro": 0.741295,
+      "recall_macro": 0.947679,
+      "f1_macro": 0.773027,
+      "inference_time_ms": 7.516,
+      "inference_ms_per_sample": 0.000305,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          868,
+          34,
+          0,
+          0,
+          9,
+          68,
+          0,
+          1,
+          470,
+          0,
+          80,
+          20
+        ],
+        [
+          1,
+          102,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          823,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          19,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          493,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          0,
+          0,
+          5,
+          19,
+          0,
+          0,
+          23,
+          0,
+          1523,
+          32
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          50
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.9730941704035875,
+          "recall": 0.56,
+          "f1-score": 0.7108927108927109,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.6580645161290323,
+          "recall": 0.9532710280373832,
+          "f1-score": 0.7786259541984732,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 1.0,
+          "recall": 0.9927623642943305,
+          "f1-score": 0.9963680387409201,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.28,
+          "recall": 1.0,
+          "f1-score": 0.4375,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.06060606060606061,
+          "recall": 1.0,
+          "f1-score": 0.11428571428571428,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1-score": 0.9975062344139651,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.49848331648129424,
+          "recall": 0.9517374517374517,
+          "f1-score": 0.6542800265428003,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.949501246882793,
+          "recall": 0.938964241676942,
+          "f1-score": 0.9442033477991321,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.4807692307692308,
+          "recall": 0.9803921568627451,
+          "f1-score": 0.6451612903225806,
+          "support": 51.0
+        },
+        "accuracy": 0.9666991552956465,
+        "macro avg": {
+          "precision": 0.7412952847411572,
+          "recall": 0.9476793431858953,
+          "f1-score": 0.7730274626341883,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9813946592750898,
+          "recall": 0.9666991552956465,
+          "f1-score": 0.9685977444845636,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.997001,
+      "pr_auc": 0.901847,
+      "is_near_random": false,
+      "performance_warning": null,
+      "operational_readiness": "PRODUCTION_READY"
+    },
+    "evaluation_date": "2026-10-11T18:14:08.998509+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\models\\logisticregression\\LogisticRegression_v2_20261011T180309589011Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "17030/12312/24624",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": false,
+    "production_ready": false,
+    "warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty."
+  },
+  {
+    "model_name": "DecisionTree",
+    "version": "v2_20261011T180309589011Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "id.resp_p",
+      "proto",
+      "service",
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "flow_FIN_flag_count",
+      "flow_SYN_flag_count",
+      "flow_RST_flag_count",
+      "fwd_PSH_flag_count",
+      "bwd_PSH_flag_count",
+      "flow_ACK_flag_count",
+      "fwd_URG_flag_count",
+      "flow_CWR_flag_count",
+      "flow_ECE_flag_count",
+      "fwd_pkts_payload.min",
+      "fwd_pkts_payload.max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "fwd_pkts_payload.std",
+      "bwd_pkts_payload.min",
+      "bwd_pkts_payload.max",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "bwd_pkts_payload.std",
+      "flow_pkts_payload.min",
+      "flow_pkts_payload.max",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "flow_pkts_payload.std",
+      "fwd_iat.min",
+      "fwd_iat.max",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "fwd_iat.std",
+      "bwd_iat.min",
+      "bwd_iat.max",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "bwd_iat.std",
+      "flow_iat.min",
+      "flow_iat.max",
+      "flow_iat.tot",
+      "flow_iat.avg",
+      "flow_iat.std",
+      "payload_bytes_per_second",
+      "fwd_subflow_pkts",
+      "bwd_subflow_pkts",
+      "fwd_subflow_bytes",
+      "bwd_subflow_bytes",
+      "fwd_bulk_bytes",
+      "bwd_bulk_bytes",
+      "fwd_bulk_packets",
+      "bwd_bulk_packets",
+      "fwd_bulk_rate",
+      "bwd_bulk_rate",
+      "active.min",
+      "active.max",
+      "active.tot",
+      "active.avg",
+      "active.std",
+      "idle.min",
+      "idle.max",
+      "idle.tot",
+      "idle.avg",
+      "idle.std",
+      "fwd_init_window_size",
+      "bwd_init_window_size",
+      "fwd_last_window_size",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T18:14:28.508518+00:00",
+    "metrics": {
+      "model_name": "DecisionTree",
+      "evaluated_at": "2026-10-11T18:14:09.103199+00:00",
+      "accuracy": 0.995208,
+      "precision": 0.99576,
+      "recall": 0.995208,
+      "f1": 0.995372,
+      "precision_weighted": 0.99576,
+      "recall_weighted": 0.995208,
+      "f1_weighted": 0.995372,
+      "precision_macro": 0.925403,
+      "recall_macro": 0.958954,
+      "f1_macro": 0.937981,
+      "inference_time_ms": 6.189,
+      "inference_ms_per_sample": 0.000251,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          1490,
+          37,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          7,
+          0,
+          13,
+          0
+        ],
+        [
+          0,
+          97,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          827,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          4,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          512,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          18,
+          8,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1593,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          43
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.986101919258769,
+          "recall": 0.9612903225806452,
+          "f1-score": 0.9735380594576936,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.6643835616438356,
+          "recall": 0.9065420560747663,
+          "f1-score": 0.766798418972332,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.998792270531401,
+          "recall": 0.9975874547647768,
+          "f1-score": 0.9981894990947495,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.7,
+          "recall": 1.0,
+          "f1-score": 0.8235294117647058,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1-score": 0.9975062344139651,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.9660377358490566,
+          "recall": 0.9884169884169884,
+          "f1-score": 0.9770992366412213,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.9975062344139651,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9962640099626401,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9863777089783282,
+          "recall": 0.9821208384710234,
+          "f1-score": 0.9842446709916589,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.9772727272727273,
+          "recall": 0.8431372549019608,
+          "f1-score": 0.9052631578947369,
+          "support": 51.0
+        },
+        "accuracy": 0.9952079272254711,
+        "macro avg": {
+          "precision": 0.9254025305752754,
+          "recall": 0.958954427013782,
+          "f1-score": 0.9379805027105864,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9957602903589943,
+          "recall": 0.9952079272254711,
+          "f1-score": 0.995372209409129,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.981145,
+      "pr_auc": 0.932166,
+      "is_near_random": false,
+      "performance_warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty.",
+      "operational_readiness": "EXPERIMENTAL"
+    },
+    "validation_metrics": {
+      "model_name": "DecisionTree",
+      "evaluated_at": "2026-10-11T18:14:09.103199+00:00",
+      "accuracy": 0.995208,
+      "precision": 0.99576,
+      "recall": 0.995208,
+      "f1": 0.995372,
+      "precision_weighted": 0.99576,
+      "recall_weighted": 0.995208,
+      "f1_weighted": 0.995372,
+      "precision_macro": 0.925403,
+      "recall_macro": 0.958954,
+      "f1_macro": 0.937981,
+      "inference_time_ms": 6.189,
+      "inference_ms_per_sample": 0.000251,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          1490,
+          37,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          7,
+          0,
+          13,
+          0
+        ],
+        [
+          0,
+          97,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          827,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          4,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          512,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          18,
+          8,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1593,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          43
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.986101919258769,
+          "recall": 0.9612903225806452,
+          "f1-score": 0.9735380594576936,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.6643835616438356,
+          "recall": 0.9065420560747663,
+          "f1-score": 0.766798418972332,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.998792270531401,
+          "recall": 0.9975874547647768,
+          "f1-score": 0.9981894990947495,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.7,
+          "recall": 1.0,
+          "f1-score": 0.8235294117647058,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1-score": 0.9975062344139651,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.9660377358490566,
+          "recall": 0.9884169884169884,
+          "f1-score": 0.9770992366412213,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 0.9975062344139651,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9962640099626401,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9863777089783282,
+          "recall": 0.9821208384710234,
+          "f1-score": 0.9842446709916589,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.9772727272727273,
+          "recall": 0.8431372549019608,
+          "f1-score": 0.9052631578947369,
+          "support": 51.0
+        },
+        "accuracy": 0.9952079272254711,
+        "macro avg": {
+          "precision": 0.9254025305752754,
+          "recall": 0.958954427013782,
+          "f1-score": 0.9379805027105864,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9957602903589943,
+          "recall": 0.9952079272254711,
+          "f1-score": 0.995372209409129,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.981145,
+      "pr_auc": 0.932166,
+      "is_near_random": false,
+      "performance_warning": null,
+      "operational_readiness": "PRODUCTION_READY"
+    },
+    "evaluation_date": "2026-10-11T18:14:09.103199+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\models\\decisiontree\\DecisionTree_v2_20261011T180309589011Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "17030/12312/24624",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": false,
+    "production_ready": false,
+    "warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty."
+  },
+  {
+    "model_name": "RandomForest",
+    "version": "v2_20261011T180309589011Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "id.resp_p",
+      "proto",
+      "service",
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "flow_FIN_flag_count",
+      "flow_SYN_flag_count",
+      "flow_RST_flag_count",
+      "fwd_PSH_flag_count",
+      "bwd_PSH_flag_count",
+      "flow_ACK_flag_count",
+      "fwd_URG_flag_count",
+      "flow_CWR_flag_count",
+      "flow_ECE_flag_count",
+      "fwd_pkts_payload.min",
+      "fwd_pkts_payload.max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "fwd_pkts_payload.std",
+      "bwd_pkts_payload.min",
+      "bwd_pkts_payload.max",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "bwd_pkts_payload.std",
+      "flow_pkts_payload.min",
+      "flow_pkts_payload.max",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "flow_pkts_payload.std",
+      "fwd_iat.min",
+      "fwd_iat.max",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "fwd_iat.std",
+      "bwd_iat.min",
+      "bwd_iat.max",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "bwd_iat.std",
+      "flow_iat.min",
+      "flow_iat.max",
+      "flow_iat.tot",
+      "flow_iat.avg",
+      "flow_iat.std",
+      "payload_bytes_per_second",
+      "fwd_subflow_pkts",
+      "bwd_subflow_pkts",
+      "fwd_subflow_bytes",
+      "bwd_subflow_bytes",
+      "fwd_bulk_bytes",
+      "bwd_bulk_bytes",
+      "fwd_bulk_packets",
+      "bwd_bulk_packets",
+      "fwd_bulk_rate",
+      "bwd_bulk_rate",
+      "active.min",
+      "active.max",
+      "active.tot",
+      "active.avg",
+      "active.std",
+      "idle.min",
+      "idle.max",
+      "idle.tot",
+      "idle.avg",
+      "idle.std",
+      "fwd_init_window_size",
+      "bwd_init_window_size",
+      "fwd_last_window_size",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T18:14:28.519405+00:00",
+    "metrics": {
+      "model_name": "RandomForest",
+      "evaluated_at": "2026-10-11T18:14:09.254117+00:00",
+      "accuracy": 0.99598,
+      "precision": 0.996551,
+      "recall": 0.99598,
+      "f1": 0.996159,
+      "precision_weighted": 0.996551,
+      "recall_weighted": 0.99598,
+      "f1_weighted": 0.996159,
+      "precision_macro": 0.924357,
+      "recall_macro": 0.972369,
+      "f1_macro": 0.945088,
+      "inference_time_ms": 76.668,
+      "inference_ms_per_sample": 0.003114,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          1496,
+          37,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          6,
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          99,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          827,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          4,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          511,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          13,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1598,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          50
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.988110964332893,
+          "recall": 0.9651612903225807,
+          "f1-score": 0.9765013054830287,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.668918918918919,
+          "recall": 0.9252336448598131,
+          "f1-score": 0.7764705882352941,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 1.0,
+          "recall": 0.9975874547647768,
+          "f1-score": 0.998792270531401,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.7777777777777778,
+          "recall": 1.0,
+          "f1-score": 0.875,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.969639468690702,
+          "recall": 0.9864864864864865,
+          "f1-score": 0.9779904306220095,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9931634555624611,
+          "recall": 0.9852034525277436,
+          "f1-score": 0.9891674404209223,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.9803921568627451,
+          "recall": 0.9803921568627451,
+          "f1-score": 0.9803921568627451,
+          "support": 51.0
+        },
+        "accuracy": 0.9959795321637427,
+        "macro avg": {
+          "precision": 0.9243573713692678,
+          "recall": 0.9723685578982808,
+          "f1-score": 0.9450875996500113,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.996550554234672,
+          "recall": 0.9959795321637427,
+          "f1-score": 0.9961592223434509,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.991376,
+      "pr_auc": 0.979156,
+      "is_near_random": false,
+      "performance_warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty.",
+      "operational_readiness": "EXPERIMENTAL"
+    },
+    "validation_metrics": {
+      "model_name": "RandomForest",
+      "evaluated_at": "2026-10-11T18:14:09.254117+00:00",
+      "accuracy": 0.99598,
+      "precision": 0.996551,
+      "recall": 0.99598,
+      "f1": 0.996159,
+      "precision_weighted": 0.996551,
+      "recall_weighted": 0.99598,
+      "f1_weighted": 0.996159,
+      "precision_macro": 0.924357,
+      "recall_macro": 0.972369,
+      "f1_macro": 0.945088,
+      "inference_time_ms": 76.668,
+      "inference_ms_per_sample": 0.003114,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          1496,
+          37,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          6,
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          99,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          827,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          4,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          511,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          13,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1598,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          50
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.988110964332893,
+          "recall": 0.9651612903225807,
+          "f1-score": 0.9765013054830287,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.668918918918919,
+          "recall": 0.9252336448598131,
+          "f1-score": 0.7764705882352941,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 1.0,
+          "recall": 0.9975874547647768,
+          "f1-score": 0.998792270531401,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.7777777777777778,
+          "recall": 1.0,
+          "f1-score": 0.875,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.969639468690702,
+          "recall": 0.9864864864864865,
+          "f1-score": 0.9779904306220095,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9931634555624611,
+          "recall": 0.9852034525277436,
+          "f1-score": 0.9891674404209223,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.9803921568627451,
+          "recall": 0.9803921568627451,
+          "f1-score": 0.9803921568627451,
+          "support": 51.0
+        },
+        "accuracy": 0.9959795321637427,
+        "macro avg": {
+          "precision": 0.9243573713692678,
+          "recall": 0.9723685578982808,
+          "f1-score": 0.9450875996500113,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.996550554234672,
+          "recall": 0.9959795321637427,
+          "f1-score": 0.9961592223434509,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.991376,
+      "pr_auc": 0.979156,
+      "is_near_random": false,
+      "performance_warning": null,
+      "operational_readiness": "PRODUCTION_READY"
+    },
+    "evaluation_date": "2026-10-11T18:14:09.254117+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\models\\randomforest\\RandomForest_v2_20261011T180309589011Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "17030/12312/24624",
+    "is_production": true,
+    "validated": true,
+    "is_near_random": false,
+    "production_ready": false,
+    "warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty."
+  },
+  {
+    "model_name": "SVM",
+    "version": "v2_20261011T180309589011Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "id.resp_p",
+      "proto",
+      "service",
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "flow_FIN_flag_count",
+      "flow_SYN_flag_count",
+      "flow_RST_flag_count",
+      "fwd_PSH_flag_count",
+      "bwd_PSH_flag_count",
+      "flow_ACK_flag_count",
+      "fwd_URG_flag_count",
+      "flow_CWR_flag_count",
+      "flow_ECE_flag_count",
+      "fwd_pkts_payload.min",
+      "fwd_pkts_payload.max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "fwd_pkts_payload.std",
+      "bwd_pkts_payload.min",
+      "bwd_pkts_payload.max",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "bwd_pkts_payload.std",
+      "flow_pkts_payload.min",
+      "flow_pkts_payload.max",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "flow_pkts_payload.std",
+      "fwd_iat.min",
+      "fwd_iat.max",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "fwd_iat.std",
+      "bwd_iat.min",
+      "bwd_iat.max",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "bwd_iat.std",
+      "flow_iat.min",
+      "flow_iat.max",
+      "flow_iat.tot",
+      "flow_iat.avg",
+      "flow_iat.std",
+      "payload_bytes_per_second",
+      "fwd_subflow_pkts",
+      "bwd_subflow_pkts",
+      "fwd_subflow_bytes",
+      "bwd_subflow_bytes",
+      "fwd_bulk_bytes",
+      "bwd_bulk_bytes",
+      "fwd_bulk_packets",
+      "bwd_bulk_packets",
+      "fwd_bulk_rate",
+      "bwd_bulk_rate",
+      "active.min",
+      "active.max",
+      "active.tot",
+      "active.avg",
+      "active.std",
+      "idle.min",
+      "idle.max",
+      "idle.tot",
+      "idle.avg",
+      "idle.std",
+      "fwd_init_window_size",
+      "bwd_init_window_size",
+      "fwd_last_window_size",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T18:14:28.533201+00:00",
+    "metrics": {
+      "model_name": "SVM",
+      "evaluated_at": "2026-10-11T18:14:18.540921+00:00",
+      "accuracy": 0.967836,
+      "precision": 0.981063,
+      "recall": 0.967836,
+      "f1": 0.970122,
+      "precision_weighted": 0.981063,
+      "recall_weighted": 0.967836,
+      "f1_weighted": 0.970122,
+      "precision_macro": 0.741961,
+      "recall_macro": 0.944895,
+      "f1_macro": 0.771274,
+      "inference_time_ms": 9144.007,
+      "inference_ms_per_sample": 0.371345,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          915,
+          6,
+          0,
+          0,
+          14,
+          72,
+          4,
+          20,
+          466,
+          0,
+          40,
+          13
+        ],
+        [
+          0,
+          106,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          820,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          25,
+          0,
+          0,
+          3,
+          1,
+          0,
+          1,
+          486,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          42,
+          2,
+          0,
+          0,
+          16,
+          17,
+          1,
+          0,
+          12,
+          0,
+          1514,
+          18
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          46
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.9452479338842975,
+          "recall": 0.5903225806451613,
+          "f1-score": 0.7267672756155679,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.762589928057554,
+          "recall": 0.9906542056074766,
+          "f1-score": 0.8617886178861789,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 1.0,
+          "recall": 0.9891435464414958,
+          "f1-score": 0.9945421467556095,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.17073170731707318,
+          "recall": 1.0,
+          "f1-score": 0.2916666666666667,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.06,
+          "recall": 1.0,
+          "f1-score": 0.11320754716981132,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 0.9852216748768473,
+          "recall": 1.0,
+          "f1-score": 0.9925558312655087,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 0.9049773755656109,
+          "recall": 1.0,
+          "f1-score": 0.9501187648456056,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.5031055900621118,
+          "recall": 0.9382239382239382,
+          "f1-score": 0.6549865229110512,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9742599742599742,
+          "recall": 0.9334155363748459,
+          "f1-score": 0.9534005037783375,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.5974025974025974,
+          "recall": 0.9019607843137255,
+          "f1-score": 0.71875,
+          "support": 51.0
+        },
+        "accuracy": 0.9678362573099415,
+        "macro avg": {
+          "precision": 0.7419613984521723,
+          "recall": 0.9448954556023778,
+          "f1-score": 0.7712741759423585,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9810630520308352,
+          "recall": 0.9678362573099415,
+          "f1-score": 0.9701224613642853,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.962243,
+      "pr_auc": 0.840855,
+      "is_near_random": false,
+      "performance_warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty.",
+      "operational_readiness": "EXPERIMENTAL"
+    },
+    "validation_metrics": {
+      "model_name": "SVM",
+      "evaluated_at": "2026-10-11T18:14:18.540921+00:00",
+      "accuracy": 0.967836,
+      "precision": 0.981063,
+      "recall": 0.967836,
+      "f1": 0.970122,
+      "precision_weighted": 0.981063,
+      "recall_weighted": 0.967836,
+      "f1_weighted": 0.970122,
+      "precision_macro": 0.741961,
+      "recall_macro": 0.944895,
+      "f1_macro": 0.771274,
+      "inference_time_ms": 9144.007,
+      "inference_ms_per_sample": 0.371345,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          915,
+          6,
+          0,
+          0,
+          14,
+          72,
+          4,
+          20,
+          466,
+          0,
+          40,
+          13
+        ],
+        [
+          0,
+          106,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          820,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          25,
+          0,
+          0,
+          3,
+          1,
+          0,
+          1,
+          486,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          42,
+          2,
+          0,
+          0,
+          16,
+          17,
+          1,
+          0,
+          12,
+          0,
+          1514,
+          18
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          46
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.9452479338842975,
+          "recall": 0.5903225806451613,
+          "f1-score": 0.7267672756155679,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.762589928057554,
+          "recall": 0.9906542056074766,
+          "f1-score": 0.8617886178861789,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 1.0,
+          "recall": 0.9891435464414958,
+          "f1-score": 0.9945421467556095,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.17073170731707318,
+          "recall": 1.0,
+          "f1-score": 0.2916666666666667,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.06,
+          "recall": 1.0,
+          "f1-score": 0.11320754716981132,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 0.9852216748768473,
+          "recall": 1.0,
+          "f1-score": 0.9925558312655087,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 0.9049773755656109,
+          "recall": 1.0,
+          "f1-score": 0.9501187648456056,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.5031055900621118,
+          "recall": 0.9382239382239382,
+          "f1-score": 0.6549865229110512,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9742599742599742,
+          "recall": 0.9334155363748459,
+          "f1-score": 0.9534005037783375,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.5974025974025974,
+          "recall": 0.9019607843137255,
+          "f1-score": 0.71875,
+          "support": 51.0
+        },
+        "accuracy": 0.9678362573099415,
+        "macro avg": {
+          "precision": 0.7419613984521723,
+          "recall": 0.9448954556023778,
+          "f1-score": 0.7712741759423585,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9810630520308352,
+          "recall": 0.9678362573099415,
+          "f1-score": 0.9701224613642853,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.962243,
+      "pr_auc": 0.840855,
+      "is_near_random": false,
+      "performance_warning": null,
+      "operational_readiness": "PRODUCTION_READY"
+    },
+    "evaluation_date": "2026-10-11T18:14:18.540921+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\models\\svm\\SVM_v2_20261011T180309589011Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "17030/12312/24624",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": false,
+    "production_ready": false,
+    "warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty."
+  },
+  {
+    "model_name": "GradientBoosting",
+    "version": "v2_20261011T180309589011Z",
+    "dataset": "RT_IOT2022",
+    "features": [
+      "id.resp_p",
+      "proto",
+      "service",
+      "flow_duration",
+      "fwd_pkts_tot",
+      "bwd_pkts_tot",
+      "fwd_data_pkts_tot",
+      "bwd_data_pkts_tot",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "flow_FIN_flag_count",
+      "flow_SYN_flag_count",
+      "flow_RST_flag_count",
+      "fwd_PSH_flag_count",
+      "bwd_PSH_flag_count",
+      "flow_ACK_flag_count",
+      "fwd_URG_flag_count",
+      "flow_CWR_flag_count",
+      "flow_ECE_flag_count",
+      "fwd_pkts_payload.min",
+      "fwd_pkts_payload.max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "fwd_pkts_payload.std",
+      "bwd_pkts_payload.min",
+      "bwd_pkts_payload.max",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "bwd_pkts_payload.std",
+      "flow_pkts_payload.min",
+      "flow_pkts_payload.max",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "flow_pkts_payload.std",
+      "fwd_iat.min",
+      "fwd_iat.max",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "fwd_iat.std",
+      "bwd_iat.min",
+      "bwd_iat.max",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "bwd_iat.std",
+      "flow_iat.min",
+      "flow_iat.max",
+      "flow_iat.tot",
+      "flow_iat.avg",
+      "flow_iat.std",
+      "payload_bytes_per_second",
+      "fwd_subflow_pkts",
+      "bwd_subflow_pkts",
+      "fwd_subflow_bytes",
+      "bwd_subflow_bytes",
+      "fwd_bulk_bytes",
+      "bwd_bulk_bytes",
+      "fwd_bulk_packets",
+      "bwd_bulk_packets",
+      "fwd_bulk_rate",
+      "bwd_bulk_rate",
+      "active.min",
+      "active.max",
+      "active.tot",
+      "active.avg",
+      "active.std",
+      "idle.min",
+      "idle.max",
+      "idle.tot",
+      "idle.avg",
+      "idle.std",
+      "fwd_init_window_size",
+      "bwd_init_window_size",
+      "fwd_last_window_size",
+      "packet_rate",
+      "fwd_bwd_ratio",
+      "total_pkts",
+      "traffic_asymmetry"
+    ],
+    "training_date": "2026-10-11T18:14:28.562696+00:00",
+    "metrics": {
+      "model_name": "GradientBoosting",
+      "evaluated_at": "2026-10-11T18:14:27.946863+00:00",
+      "accuracy": 0.977542,
+      "precision": 0.986965,
+      "recall": 0.977542,
+      "f1": 0.978978,
+      "precision_weighted": 0.986965,
+      "recall_weighted": 0.977542,
+      "f1_weighted": 0.978978,
+      "precision_macro": 0.865369,
+      "recall_macro": 0.948504,
+      "f1_macro": 0.888038,
+      "inference_time_ms": 195.083,
+      "inference_ms_per_sample": 0.007922,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          1057,
+          0,
+          0,
+          0,
+          7,
+          1,
+          0,
+          0,
+          473,
+          0,
+          11,
+          1
+        ],
+        [
+          1,
+          100,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          827,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          6,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          509,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0,
+          1584,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          50
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.9768946395563771,
+          "recall": 0.6819354838709677,
+          "f1-score": 0.8031914893617021,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.9433962264150944,
+          "recall": 0.9345794392523364,
+          "f1-score": 0.9389671361502347,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.998792270531401,
+          "recall": 0.9975874547647768,
+          "f1-score": 0.9981894990947495,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.4666666666666667,
+          "recall": 1.0,
+          "f1-score": 0.6363636363636364,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.5555555555555556,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.6666666666666666,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.5084915084915085,
+          "recall": 0.9826254826254827,
+          "f1-score": 0.6701777485187623,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9912390488110138,
+          "recall": 0.9765721331689272,
+          "f1-score": 0.9838509316770186,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.9433962264150944,
+          "recall": 0.9803921568627451,
+          "f1-score": 0.9615384615384616,
+          "support": 51.0
+        },
+        "accuracy": 0.9775422352176738,
+        "macro avg": {
+          "precision": 0.8653693452035593,
+          "recall": 0.9485041966250384,
+          "f1-score": 0.8880376503154331,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9869651732426319,
+          "recall": 0.9775422352176738,
+          "f1-score": 0.9789784025734454,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.99975,
+      "pr_auc": 0.983284,
+      "is_near_random": false,
+      "performance_warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty.",
+      "operational_readiness": "EXPERIMENTAL"
+    },
+    "validation_metrics": {
+      "model_name": "GradientBoosting",
+      "evaluated_at": "2026-10-11T18:14:27.946863+00:00",
+      "accuracy": 0.977542,
+      "precision": 0.986965,
+      "recall": 0.977542,
+      "f1": 0.978978,
+      "precision_weighted": 0.986965,
+      "recall_weighted": 0.977542,
+      "f1_weighted": 0.978978,
+      "precision_macro": 0.865369,
+      "recall_macro": 0.948504,
+      "f1_macro": 0.888038,
+      "inference_time_ms": 195.083,
+      "inference_ms_per_sample": 0.007922,
+      "n_test_samples": 24624,
+      "n_classes": 12,
+      "class_names": [
+        "ARP_poisioning",
+        "DDOS_Slowloris",
+        "DOS_SYN_Hping",
+        "MQTT_Publish",
+        "Metasploit_Brute_Force_SSH",
+        "NMAP_FIN_SCAN",
+        "NMAP_OS_DETECTION",
+        "NMAP_TCP_scan",
+        "NMAP_UDP_SCAN",
+        "NMAP_XMAS_TREE_SCAN",
+        "Thing_Speak",
+        "Wipro_bulb"
+      ],
+      "confusion_matrix": [
+        [
+          1057,
+          0,
+          0,
+          0,
+          7,
+          1,
+          0,
+          0,
+          473,
+          0,
+          11,
+          1
+        ],
+        [
+          1,
+          100,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18932,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          827,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          6,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          509,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          400,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0,
+          1584,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          50
+        ]
+      ],
+      "per_class_report": {
+        "ARP_poisioning": {
+          "precision": 0.9768946395563771,
+          "recall": 0.6819354838709677,
+          "f1-score": 0.8031914893617021,
+          "support": 1550.0
+        },
+        "DDOS_Slowloris": {
+          "precision": 0.9433962264150944,
+          "recall": 0.9345794392523364,
+          "f1-score": 0.9389671361502347,
+          "support": 107.0
+        },
+        "DOS_SYN_Hping": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 18932.0
+        },
+        "MQTT_Publish": {
+          "precision": 0.998792270531401,
+          "recall": 0.9975874547647768,
+          "f1-score": 0.9981894990947495,
+          "support": 829.0
+        },
+        "Metasploit_Brute_Force_SSH": {
+          "precision": 0.4666666666666667,
+          "recall": 1.0,
+          "f1-score": 0.6363636363636364,
+          "support": 7.0
+        },
+        "NMAP_FIN_SCAN": {
+          "precision": 0.5555555555555556,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.6666666666666666,
+          "support": 6.0
+        },
+        "NMAP_OS_DETECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 400.0
+        },
+        "NMAP_TCP_scan": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 200.0
+        },
+        "NMAP_UDP_SCAN": {
+          "precision": 0.5084915084915085,
+          "recall": 0.9826254826254827,
+          "f1-score": 0.6701777485187623,
+          "support": 518.0
+        },
+        "NMAP_XMAS_TREE_SCAN": {
+          "precision": 1.0,
+          "recall": 0.9950248756218906,
+          "f1-score": 0.9975062344139651,
+          "support": 402.0
+        },
+        "Thing_Speak": {
+          "precision": 0.9912390488110138,
+          "recall": 0.9765721331689272,
+          "f1-score": 0.9838509316770186,
+          "support": 1622.0
+        },
+        "Wipro_bulb": {
+          "precision": 0.9433962264150944,
+          "recall": 0.9803921568627451,
+          "f1-score": 0.9615384615384616,
+          "support": 51.0
+        },
+        "accuracy": 0.9775422352176738,
+        "macro avg": {
+          "precision": 0.8653693452035593,
+          "recall": 0.9485041966250384,
+          "f1-score": 0.8880376503154331,
+          "support": 24624.0
+        },
+        "weighted avg": {
+          "precision": 0.9869651732426319,
+          "recall": 0.9775422352176738,
+          "f1-score": 0.9789784025734454,
+          "support": 24624.0
+        }
+      },
+      "roc_auc": 0.99975,
+      "pr_auc": 0.983284,
+      "is_near_random": false,
+      "performance_warning": null,
+      "operational_readiness": "PRODUCTION_READY"
+    },
+    "evaluation_date": "2026-10-11T18:14:27.946863+00:00",
+    "model_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\models\\gradientboosting\\GradientBoosting_v2_20261011T180309589011Z.joblib",
+    "preprocessing_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\preprocessing",
+    "sample_path": "C:\\Users\\POORNA CHANDRA D N\\Downloads\\SecureIoT-X-main\\SecureIoT-X-main\\models\\runs\\20261011T180309589011Z\\inference_sample.json",
+    "preprocessing_version": "v1",
+    "random_seed": 42,
+    "train_test_split": "17030/12312/24624",
+    "is_production": false,
+    "validated": true,
+    "is_near_random": false,
+    "production_ready": false,
+    "warning": "EXPERIMENTAL AUDIT: 81.34% of test samples are cross-split duplicates of training rows (predominantly DOS_SYN_Hping packets with stripped ephemeral ports). Classes with <10 samples (NMAP_FIN_SCAN N=6, Metasploit_Brute_Force_SSH N=7) exhibit wide uncertainty."
+  }
+]

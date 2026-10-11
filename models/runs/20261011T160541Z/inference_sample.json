@@ -1,0 +1,21 @@
+{
+  "flow_duration": 3.4084297629051323,
+  "fwd_pkts_tot": 335.0,
+  "bwd_pkts_tot": 180.0,
+  "fwd_data_pkts_tot": 277.0,
+  "bwd_data_pkts_tot": 31.0,
+  "fwd_pkts_per_sec": 45.56888831217394,
+  "bwd_pkts_per_sec": 7.582188485990194,
+  "flow_pkts_per_sec": 73.01707702297098,
+  "fwd_byts_per_sec": 4630.686811823526,
+  "bwd_byts_per_sec": 2549.2407404388346,
+  "fwd_pkts_payload_avg": 166.86562245227347,
+  "bwd_pkts_payload_avg": 148.39317821599172,
+  "proto": 6.0,
+  "dst_port": 22.0,
+  "conn_state_num": 10.0,
+  "packet_rate": 98.2857278286606,
+  "fwd_bwd_ratio": 1.850828729281768,
+  "total_pkts": 515.0,
+  "traffic_asymmetry": 0.7146929356810866
+}

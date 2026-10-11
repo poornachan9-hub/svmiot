@@ -1,0 +1,40 @@
+# ============================================================
+# SecureIoT-X MQTT Configuration
+# ============================================================
+
+broker:
+  host: "localhost"
+  port: 1883
+  keepalive: 60
+  reconnect_delay: 5
+  max_reconnect_attempts: 10
+  username: ""
+  password: ""
+
+topics:
+  telemetry: "iot/{device_id}/telemetry"
+  heartbeat: "iot/{device_id}/heartbeat"
+  status: "iot/{device_id}/status"
+  security: "iot/{device_id}/security"
+  response: "iot/{device_id}/response"
+  # Subscribe patterns
+  telemetry_all: "iot/+/telemetry"
+  heartbeat_all: "iot/+/heartbeat"
+  status_all: "iot/+/status"
+
+qos:
+  telemetry: 0
+  heartbeat: 0
+  security: 1
+  response: 1
+
+device:
+  heartbeat_interval: 30
+  telemetry_interval: 10
+  timeout_seconds: 90
+  # After timeout_seconds without heartbeat, mark OFFLINE
+
+mock:
+  enabled: true
+  # Use mock broker when real broker is unavailable
+  fallback_to_mock: true

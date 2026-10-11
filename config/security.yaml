@@ -1,0 +1,93 @@
+# ============================================================
+# SecureIoT-X Security Configuration
+# ============================================================
+
+risk_thresholds:
+  low:
+    min: 0
+    max: 30
+    label: "LOW"
+  medium:
+    min: 31
+    max: 60
+    label: "MEDIUM"
+  high:
+    min: 61
+    max: 80
+    label: "HIGH"
+  critical:
+    min: 81
+    max: 100
+    label: "CRITICAL"
+
+response_rules:
+  LOW: "ALLOW"
+  MEDIUM: "MONITOR"
+  HIGH: "ISOLATE"
+  CRITICAL: "ISOLATE_ALERT_BLOCK"
+
+severity_weights:
+  ai_confidence: 0.35
+  attack_severity: 0.25
+  attack_frequency: 0.15
+  device_criticality: 0.10
+  anomaly_score: 0.10
+  threat_history: 0.05
+
+attack_severity_scores:
+  Normal: 0
+  DoS: 70
+  DDoS: 90
+  Reconnaissance: 40
+  Brute_Force: 60
+  Spoofing: 50
+  Mirai: 85
+  MITM: 75
+  Injection: 80
+  XSS: 55
+  Backdoor: 95
+  Ransomware: 95
+  Unknown: 50
+
+device_criticality:
+  default: 50
+  gateway: 90
+  sensor: 30
+  actuator: 60
+  camera: 70
+
+confidence_thresholds:
+  # Below this, classify as SUSPICIOUS_UNKNOWN
+  min_confident: 0.60
+  # Above this, high confidence
+  high_confidence: 0.85
+
+isolation:
+  # Seconds before auto-release (0 = manual only)
+  auto_release_timeout: 0
+  # Require admin confirmation for isolation
+  require_confirmation: false
+
+roles:
+  ADMIN:
+    - "read"
+    - "write"
+    - "delete"
+    - "isolate"
+    - "release"
+    - "configure"
+    - "manage_users"
+    - "manage_models"
+  ANALYST:
+    - "read"
+    - "write"
+    - "isolate"
+    - "release"
+    - "investigate"
+  VIEWER:
+    - "read"
+
+rate_limiting:
+  login_attempts: 5
+  login_window_seconds: 300
+  api_requests_per_minute: 120
